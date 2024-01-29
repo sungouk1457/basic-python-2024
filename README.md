@@ -4,7 +4,7 @@
 ## 1일차
 - 개발화경 구축
     - 코딩폰트 - 나눔고딕코딩
-    - Norepad++ 설치
+    - Notepad++ 설치
     - Python 설치
     - Visual Studio Code 설치
     - Git 설치
