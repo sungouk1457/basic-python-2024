@@ -68,7 +68,37 @@
         - 클래스에서 하나씩 생성 : 객체(object)
         - 캡슐화(__plateN umber)
     - 패키지
+
+## 4일차
+- 파이썬 기초
+    - 패키지, 모듈 계속
+    -   pip 사용
+    ```shell
+    pip --verion #버전확인
+    pip list #현재 설치된 라이브러리 목록 확인
+    pip install 패키지명 #패키지를 내컴퓨터에 설치
+    pip uninstall 패키지명 #패키지를 삭제
+    ```
+    - 예외처리 : 비정상적 프로그램종료 막기
+    ```python
+    # ZeroDivisionError 발생
+    def divide(x,y):
+        try:
+            return x/y 
+        except ZeroDivisionError as e:
+        print('제수는 0이 될 수 없습니다')
+        return 0
+    ```
+    - 파일 입출력
+    - 가상환경
+
+- 파이썬 활용
+    - 주피터 노트북
+
+
+
     - 객체지향(나중에)
         - 오버로딩, 오버라이딩(재정의)
         - 상속, 다중상속
-        - 추상클래스 
+        - 추상클래스
+
