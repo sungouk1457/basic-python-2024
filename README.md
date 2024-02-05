@@ -129,7 +129,7 @@
     - QtDesigner 
     - ☆☆☆쓰레드 학습 : UI쓰레드와 Backround쓰레드 분리
         - GIL병렬프로세싱 더 학습할 것
-    ![folium사용법](https://raw.githubusercontent.com/sungouk1457/basic-python-2024/main/images/python_003.gif)
+        ![folium사용법](https://raw.githubusercontent.com/sungouk1457/basic-python-2024/main/images/python_003.gif)
 
 
     - 객체지향(나중에)
