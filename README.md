@@ -119,8 +119,6 @@
 - 파이썬 응용
     - Window App(PyQt) 만들기
 
-- 가상환경
-
     ```shell
     > pip install PyQt5
     > pip install PyQt5Designer
@@ -129,9 +127,30 @@
     - QtDesigner 
     - ☆☆☆쓰레드 학습 : UI쓰레드와 Backround쓰레드 분리
         - GIL병렬프로세싱 더 학습할 것
-        ![folium사용법](https://raw.githubusercontent.com/sungouk1457/basic-python-2024/main/images/python_003.gif)
 
+     ![folium사용법](https://raw.githubusercontent.com/sungouk1457/basic-python-2024/main/images/python_003.gif)
 
+    ```python
+    # 쓰레드 클래스에서 시그널 선언
+    class BackWorker(QThread): #PyQt에서 스레드 클래스 상속
+        initSignal = pyqtSignal(int) # 시그널을 UI스레드로 전달하기위한 변수객체
+        setSignal = pyqtSignal(int)
+    #...
+
+    def run(self) -> None: # 스레드 실행
+        # 스레드로 동작할 내용
+        maxVal = 1000001
+        # ...
+
+    class qtwin_exam(QWidget): #UI스레드
+        #...
+        def btnStartClicked(self):
+        th = BackWorker(self)
+        th.start()  #BackWorker 내의 self.run 실행
+        th.initSignal.connect(self.initpgbTask)
+        # ...
+    ```
+- 가상환경
     - 객체지향(나중에)
     
         - 오버로딩, 오버라이딩(재정의)
