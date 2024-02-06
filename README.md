@@ -103,7 +103,7 @@
         - ctrl + shift + p (명령팔레트)로 시작
         - 사용방법 (test31_jupyter.ipynb 참조)
     - folium 기본사용
-    ![folium사용법](https://raw.githubusercontent.com/sungouk1457/basic-python-2024/main/images/Image001.png)
+    ![folium사용법](https://raw.githubusercontent.com/sungouk1457/basic-python-2024/main/images/Image_001.png)
 
 ## 5일차
 - 파이썬 활용
@@ -127,7 +127,7 @@
     - PyQt5 기본실행
     - QtDesigner 
     - ☆☆☆쓰레드 학습 : UI쓰레드와 Backround쓰레드 분리
-        - GIL병렬프로세싱 더 학습할 것
+        - [ ]GIL병렬프로세싱 더 학습할 것
 
      ![쓰레드 예제](https://raw.githubusercontent.com/sungouk1457/basic-python-2024/main/images/python_003.gif)
 
