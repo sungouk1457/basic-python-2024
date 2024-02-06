@@ -129,7 +129,7 @@
     - ☆☆☆쓰레드 학습 : UI쓰레드와 Backround쓰레드 분리
         - GIL병렬프로세싱 더 학습할 것
 
-     ![folium사용법](https://raw.githubusercontent.com/sungouk1457/basic-python-2024/main/images/python_003.gif)
+     ![쓰레드 예제](https://raw.githubusercontent.com/sungouk1457/basic-python-2024/main/images/python_003.gif)
 
     ```python
     # 쓰레드 클래스에서 시그널 선언
@@ -161,9 +161,10 @@
 
 ## 7일차
 - 파이썬 응용
-    - 객체지향
-        - 상속, 오버라이딩(재정의), 오버로딩(같은이름의 함수를 여러개 활용, 매개변수는 다르게)
+    - 객체지향 정리
+        - 상속, 오버라이딩(재정의), 오버로딩(같은이름의 함수를 골라쓰기)
         ```python
+        #오버 라이딩
         #QWidget에 있는 closeEvent를 그대로 쓰면 닫힘
         # 닫을지 말지를 한번더 물어보는 형태로 다시 구현하고 싶음(재정의 : Override)
         def closeEvent(self,QCloseEvent) -> None: # x버튼 종료확인
@@ -172,6 +173,22 @@
                 QCloseEvent.accept()
             else:
                 QCloseEvent.ignore()
+        #오버로딩
+        rect = QRect(300,300,300,300) # x,y,w,h
+        self.setGeometry(rect) # 같은 이름의 함수를 여러개 선언해놓고 입맛에 맞게 골라쓰는 방법(오버로딩)
+        self.setGeometry(300,300,300,300)
         ```
     - 가상환경 Virtualenv
+        - 다른 버전 파이썬도 설치해야 가능
+        - 3.11에서 3.9 강상환경을 만들려면 3.9 파이썬 설치필요
+
     - PyQt5와 응용예제 연습
+        - 이미지 뷰어
+        - 이미지 에디터
+
+    ![PyQt예제](https://raw.githubusercontent.com/sungouk1457/basic-python-2024/main/images/python_004.gif)
+
+## 8일차
+- 파이썬 응용
+    - PyQt5 응용예제 계속
+- 파이썬 기본 코딩테스트
