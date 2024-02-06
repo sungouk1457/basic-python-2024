@@ -104,6 +104,7 @@
         - 사용방법 (test31_jupyter.ipynb 참조)
     - folium 기본사용
     ![folium사용법](https://raw.githubusercontent.com/sungouk1457/basic-python-2024/main/images/Image001.png)
+
 ## 5일차
 - 파이썬 활용
     - 주피터 노트북 활용(구글 코랩 Colab)
@@ -157,10 +158,20 @@
             self.pgbTask.setRange(0,maxVal-1)
         #...
     ```
-- 가상환경
-    - 객체지향(나중에)
-    
-        - 오버로딩, 오버라이딩(재정의)
-        - 상속, 다중상속
-        - 추상클래스
 
+## 7일차
+- 파이썬 응용
+    - 객체지향
+        - 상속, 오버라이딩(재정의), 오버로딩(같은이름의 함수를 여러개 활용, 매개변수는 다르게)
+        ```python
+        #QWidget에 있는 closeEvent를 그대로 쓰면 닫힘
+        # 닫을지 말지를 한번더 물어보는 형태로 다시 구현하고 싶음(재정의 : Override)
+        def closeEvent(self,QCloseEvent) -> None: # x버튼 종료확인
+            re = QMessageBox.question(self,'종료확인','종료확인',QMessageBox.Yes|QMessageBox.No)
+            if re == QMessageBox.Yes:
+                QCloseEvent.accept()
+            else:
+                QCloseEvent.ignore()
+        ```
+    - 가상환경 Virtualenv
+    - PyQt5와 응용예제 연습
