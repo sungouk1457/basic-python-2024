@@ -43,7 +43,9 @@ class qtwin_exam(QWidget): #UI스레드
         th.setSignal.connect(self.setpgbTask)
         th.setLog.connect(self.settxbLog) #textbrowser 위젯에 진행사항 전달
 
-    def closeEvent(self,QCloseEvent) -> None:
+    #QWidget에 있는 closeEvent를 그대로 쓰면 닫힘
+    # 닫을지 말지를 한번더 물어보는 형태로 다시 구현하고 싶음(재정의 : Override)
+    def closeEvent(self,QCloseEvent) -> None: # x버튼 종료확인
         re = QMessageBox.question(self,'종료확인','종료확인',QMessageBox.Yes|QMessageBox.No)
         if re == QMessageBox.Yes:
             QCloseEvent.accept()
